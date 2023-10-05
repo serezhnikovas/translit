@@ -1,0 +1,250 @@
+.container {
+  max-width: 1280px;
+  height: 754px;
+  margin: 0 auto;
+  font-family: IBM Plex Mono;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -3.2px;
+  color: #4520ab;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+
+.form-text {
+  width: 500px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid #111;
+}
+
+.form-text__input {
+  width: 70%;
+  border: none;
+  outline: none;
+  letter-spacing: -0.9px;
+  opacity: 0.4;
+}
+
+.form-text__button {
+  height: 38px;
+  width: 107px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: -0.54px;
+}
+
+.form-text__button:hover {
+  transform: scale(1.05);
+}
+.form-text__button:active {
+  transform: scale(1);
+}
+
+.dictionary {
+  width: 500px;
+  display: flex;
+}
+
+.rus-dict {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #111;
+  display: flex;
+  flex-direction: column;
+  counter-reset: num 0;
+}
+
+.rus-dict__word {
+  background: #f0f0f0;
+  position: relative;
+  max-width: 100%;
+  height: 40px;
+  border-top: 1px solid #111;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-left: 12px;
+  counter-increment: num 1;
+}
+
+.rus-dict__word::before {
+  content: counter(num);
+}
+
+.rus-dict__word:first-child {
+  border-radius: 8px 0 0 0;
+  border-top: none;
+}
+
+.rus-dict__word:last-child {
+  border-radius: 0 0 0 8px;
+}
+
+.rus-dict .rus-border-radius {
+  border-radius: 8px 0 0 8px;
+}
+
+.eng-dict {
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid #111;
+  display: flex;
+  flex-direction: column;
+}
+
+.eng-dict__word {
+  max-width: 100%;
+  height: 40px;
+  position: relative;
+  background: rgb(211, 211, 211);
+  border-top: 1px solid #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 11px 0 28px;
+}
+
+.eng-dict__word > span:last-child {
+  font-size: 1px;
+}
+
+.eng-dict__clear:hover {
+  transform: scale(1.2);
+}
+
+.eng-dict__clear:active {
+  transform: scale(1);
+}
+
+.eng-dict__word:first-child {
+  border-radius: 0 8px 0 0;
+  border-top: none;
+}
+
+.eng-dict__word:last-child {
+  border-radius: 0 0 8px 0;
+}
+
+.eng-dict .eng-border-radius {
+  border-radius: 0 8px 8px 0;
+}
+
+.clear-dictionary {
+  height: 38px;
+  width: 176px;
+  border: none;
+  border-radius: 8px;
+  background: #adadad;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  letter-spacing: -0.9px;
+}
+
+.clear-dictionary:hover {
+  transform: scale(1.05);
+}
+
+.clear-dictionary:active {
+  transform: scale(1);
+}
+
+.rus-dict__tooltip,
+.eng-dict__tooltip {
+  border: 1px solid black;
+  position: absolute;
+  padding: 0 10px;
+  left: 20px;
+  bottom: 90%;
+  width: 180px;
+  border-radius: 30px;
+  background: white;
+  overflow-wrap: break-word;
+  overflow: auto;
+  text-align: center;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.rus-dict__word:hover .rus-dict__tooltip,
+.eng-dict__word:hover .eng-dict__tooltip {
+  visibility: visible;
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 360px;
+    height: 664px;
+  }
+
+  .header {
+    font-size: 36px;
+    letter-spacing: -2.52px;
+  }
+
+  .form-text {
+    width: 328px;
+  }
+
+  .form-text__input {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  .form-text__button {
+    margin-right: 10px;
+  }
+
+  .dictionary {
+    width: 328px;
+  }
+
+  .rus-dict__word {
+    gap: 16px;
+  }
+
+  .eng-dict__word {
+    padding: 0 8px 0 16px;
+  }
+
+  .rus-dict__tooltip,
+  .eng-dict__tooltip {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 360px;
+    height: 664px;
+  }
+}

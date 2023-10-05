@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <script src="./index.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+    </style>
+    <title>T.R.A.N.S.L.I.T.</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <p>T.R.A.N.S.L.I.T.</p>
+      </header>
+      <main class="main">
+        <form class="form-text">
+          <input
+            class="form-text__input"
+            type="text"
+            placeholder="Начните вводить текст"
+          />
+          <button class="form-text__button" type="button">Добавить</button>
+        </form>
+        <div class="dictionary">
+          <div class="rus-dict">
+            <div class="rus-dict__word rus-border-radius">Привет 👋</div>
+          </div>
+          <div class="eng-dict">
+            <div class="eng-dict__word eng-border-radius">
+              <span>Privet</span>
+              <span class="clear-wrapper"
+                ><img
+                  class="eng-dict__clear"
+                  src="./icons/clear.svg"
+                  alt="clear-icon"
+              /></span>
+            </div>
+          </div>
+        </div>
+        <button class="clear-dictionary" type="button">
+          <img src="./icons/clearall.svg" alt="clearall-icon" />
+          <span>Очистить всё</span>
+        </button>
+      </main>
+    </div>
+  </body>
+</html>
